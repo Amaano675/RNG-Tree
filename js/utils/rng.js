@@ -14,7 +14,7 @@ function RNGReset() {
 const RNG_DATA = {
 	rows: 10,
 	minLayers: 1,
-	maxLayers: 6,
+	maxLayers: 666,
 	layers(row) { 
 		let l = Math.max(Math.min(Math.floor(random(getSeed()*row)*RNG_DATA.maxLayers+1), RNG_DATA.maxLayers), RNG_DATA.minLayers);
 		return Math.min(l, row);		
@@ -72,7 +72,7 @@ const RNG_DATA = {
 }
 
 function random(seed) {
-    var x = Math.sin(seed*10+1) * 10000;
+    var x = Math.sin(seed*10+1) * 10000
     return x - Math.floor(x);
 }
 
